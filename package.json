@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "@nestjs/apollo": "^14.0.0",
+    "@nestjs/common": "^12.0.2",
+    "@nestjs/core": "^12.0.2",
+    "@nestjs/graphql": "^14.0.0",
+    "@prisma/client": "^7.10.0",
+    "graphql": "^17.0.2"
+  },
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "prisma:seed": "ts-node prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "npm run prisma:seed"
+  }
+}
