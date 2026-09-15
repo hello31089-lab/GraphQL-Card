@@ -1,20 +1,33 @@
 {
   "dependencies": {
     "@apollo/server": "^5.5.1",
+    "@as-integrations/express5": "^1.1.2",
     "@nestjs/apollo": "^14.0.0",
     "@nestjs/common": "^12.0.2",
     "@nestjs/core": "^12.0.2",
     "@nestjs/graphql": "^14.0.0",
-    "@prisma/client": "^7.10.0",
-    "graphql": "^17.0.2"
+    "@nestjs/platform-express": "^12.0.3",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "dotenv": "^17.4.2",
+    "graphql": "^17.0.2",
+    "pg": "^8.23.0"
   },
   "scripts": {
     "build": "nest build",
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "prisma:seed": "ts-node prisma/seed.ts"
+    "start:prod": "node dist/index.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed"
   },
-  "prisma": {
-    "seed": "npm run prisma:seed"
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@types/node": "^26.5.1",
+    "@types/pg": "^8.23.1",
+    "prisma": "7.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.0.0"
   }
 }
