@@ -1,8 +1,8 @@
 import { Info, Query, Resolver } from "@nestjs/graphql";
 import type { GraphQLResolveInfo } from "graphql";
-import { Profile } from "./dto/profile.object";
-import { profileSelectFromInfo } from "./profile-select";
-import { ProfileService } from "./profile.service";
+import { Profile } from "./dto/profile.object.js";
+import { profileSelectFromInfo } from "./profile-select.js";
+import { ProfileService } from "./profile.service.js";
 
 @Resolver(() => Profile)
 export class ProfileResolver {
